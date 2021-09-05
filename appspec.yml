@@ -1,8 +1,8 @@
 version: 0.0
 os: linux
 files:
-  - source: target/api.war
-    destination: /srv/apache-tomcat-9.0.44/webapps/
+  - source: target/petclinic.war
+    destination: /tomcat8/webapps/
 hooks:
   ApplicationStop:
     - location: scripts/shutdown_tomcat.sh
