@@ -1,0 +1,14 @@
+version: 0.0
+os: linux
+files:
+  - source: target/api.war
+    destination: /srv/apache-tomcat-9.0.44/webapps/
+hooks:
+  ApplicationStop:
+    - location: scripts/shutdown_tomcat.sh
+      timeout: 100
+  ApplicationStart:
+    - location: scripts/startup.sh
+      timeout: 180
+  ValidateService:
+    - location: scripts/basic_health_check.sh
