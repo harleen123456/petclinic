@@ -1,2 +1,2 @@
 #!/bin/bash
-sudo systemctl start tomcat8
+sudo systemctl start tomcat
